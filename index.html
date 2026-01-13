@@ -46,14 +46,83 @@
   </div>
 
   <!-- Footer with developer information -->
-  <footer>
-    <p>Developed by a 4th Sem Student</p>
-    <p class="disclaimer">
-      DISCLAIMER: The following questions are sourced from the question bank and are provided for your reference. Please note that this website holds no official affiliation with the university, and I cannot guarantee the absolute accuracy of the content. Wishing you the very best in your academic journey! 😊
-    </p>
-  </footer>
+<footer>
+<footer class="app-footer">
+            <div class="developer-info">
+                <p>Developed by:- 
+                    <a href="https://www.instagram.com/mayyyank" class="ig-link" target="_blank">
+                        IG Handle (for queries)
+                    </a>
+                </p>
+            </div>
+            
+            <p class="disclaimer">
+                DISCLAIMER: The following questions are sourced from the question bank and are provided for your reference. Please note that this website holds no official affiliation with the university, and I cannot guarantee the absolute accuracy of the content. Wishing you the very best in your academic journey! 😊
+            </p>
+        </footer>
+
+        <style>
+            .app-footer {
+                background: var(--card-bg);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-radius: var(--radius);
+                padding: 24px;
+                box-shadow: var(--shadow);
+                border: 1px solid rgba(255,255,255,0.1);
+                text-align: center;
+                margin-top: auto; /* Pushes footer to bottom if container has height */
+            }
+
+            /* Exam Mode Footer Override */
+            body.exam-mode .app-footer {
+                background: transparent;
+                box-shadow: none;
+                border: none;
+                border-top: 1px solid var(--border-color);
+                border-radius: 0;
+            }
+
+            .developer-info {
+                font-weight: 600;
+                margin-bottom: 12px;
+                font-size: 1rem;
+                color: var(--text-main);
+            }
+
+            .ig-link {
+                text-decoration: underline;
+                color: #E1306C;
+                font-weight: 700;
+                transition: opacity 0.2s;
+            }
+            
+            .ig-link:hover {
+                opacity: 0.8;
+            }
+
+            .disclaimer {
+                font-size: 0.85rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Mobile adjustment */
+            @media (max-width: 768px) {
+                .app-footer {
+                    padding: 20px 15px;
+                }
+                .disclaimer {
+                    font-size: 0.75rem;
+                }
+            }
+        </style>
+</footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
